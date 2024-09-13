@@ -4,7 +4,7 @@ const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const session = require('express-session');
 const MongoStore = require('connect-mongo');
-const Task = require('./models/task');
+const Task = require('./models/Task');
 require('dotenv').config(); // Add this line at the top
 
 const app = express();
