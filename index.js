@@ -40,7 +40,7 @@ app.use(session({
     store: sessionStore,
     cookie: { secure: process.env.NODE_ENV === 'production', maxAge: 24 * 60 * 60 * 1000 } // 1 day
 }));
-
+mongoose.set('strictQuery',true);
 // Set view engine
 app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
