@@ -46,6 +46,10 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 // Routes
+app.get('/', (req, res) => {
+    res.redirect('/task'); // Or render a home page or any appropriate response
+});
+
 app.get('/task', async (req, res) => {
     const filter = req.query.filter || 'all';
     try {
